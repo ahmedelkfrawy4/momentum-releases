@@ -62,8 +62,8 @@ html[lang="en"] [data-lang="en"], html[lang="ar"] [data-lang="ar"] { display: bl
     <div class="summary">
       <strong>The short version</strong>
       <ul>
-        <li>Your habits are stored on your own device. Nothing leaves it unless you turn on sync.</li>
-        <li>If you turn on sync, your habit data is stored in your private cloud account so it can appear on your other devices.</li>
+        <li>You sign in with one Momentum account (email and password) on the web, your phone and the desktop app.</li>
+        <li>Your habits are stored in your private account so they sync across your devices, and each device keeps a copy so the app works offline.</li>
         <li>No ads, no selling of data, no tracking or analytics inside the apps.</li>
         <li>You can export or delete everything at any time.</li>
       </ul>
@@ -78,44 +78,43 @@ html[lang="en"] [data-lang="en"], html[lang="ar"] [data-lang="ar"] { display: bl
       <table>
         <thead><tr><th>Data</th><th>Where it's kept</th><th>Why</th></tr></thead>
         <tbody>
-          <tr><td>Your local account: username, display name, and a salted hash of your password (never the password itself)</td><td>Only on your device</td><td>To keep your habits private on a shared device</td></tr>
-          <tr><td>Habits, check-ins, schedules, mood, sleep hours, notes and settings</td><td>On your device. Also in your cloud account if you turn on sync</td><td>To run the app and, with sync, to show the same data on all your devices</td></tr>
-          <tr><td>Email address and password for a sync account (optional)</td><td>Our sync provider, Supabase (passwords are stored hashed)</td><td>To sign you in to sync on your devices</td></tr>
+          <tr><td>Your account: email address, display name and password (stored only as a secure hash)</td><td>Our account provider, Supabase (EU, Frankfurt). Each device also keeps a hashed copy so you can sign in offline</td><td>To sign you in on your devices</td></tr>
+          <tr><td>Habits, check-ins, schedules, mood, sleep hours, notes and settings</td><td>In your Momentum account, and a copy on each device you sign in on</td><td>To run the app and show the same data on all your devices, even offline</td></tr>
           <tr><td>Reminder time</td><td>On your device</td><td>To send the daily reminder you asked for, as a local notification</td></tr>
         </tbody>
       </table>
     </div>
     <p>We do not collect your location, contacts, photos, advertising identifiers or device analytics. We don't use cookies for tracking. The website and web app use your browser's local storage only to remember your language and your app data on that device.</p>
 
-    <h2>Cloud sync</h2>
-    <p>Sync is optional and off until you create a sync account. When it's on, your habit data is sent over an encrypted connection (HTTPS) to a database run by our provider Supabase, Inc. Each account can only read and write its own data, enforced by the database itself. We access stored data only when you ask us to (for example for support) or when required by law.</p>
+    <h2>Your account and sync</h2>
+    <p>Your habit data is sent over an encrypted connection (HTTPS) to a database run by our provider Supabase, Inc. in the European Union (Frankfurt). Each account can only read and write its own data, enforced by the database itself. Changes made offline are kept on the device and sync when you reconnect. We access stored data only when you ask us to (for example for support) or when required by law. Profiles created in older versions of the app stay only on their device until you add an email to them.</p>
 
     <h2>Who we share data with</h2>
     <p>We never sell or rent your data, and we don't share it for advertising. We use these service providers:</p>
     <ul>
-      <li><strong>Supabase</strong>: stores sync accounts and synced habit data (only if you use sync).</li>
+      <li><strong>Supabase</strong>: stores Momentum accounts and their habit data (EU, Frankfurt).</li>
       <li><strong>GitHub</strong>: hosts the desktop app downloads. GitHub may log your IP address when you download a file.</li>
       <li><strong>Google Fonts</strong>: the website loads its fonts from Google, which may see your IP address.</li>
       <li><strong>Apple and Google</strong>: deliver app downloads and updates through their stores, under their own privacy policies.</li>
     </ul>
 
     <h2>How long we keep data</h2>
-    <p>Data on your device stays until you delete it or remove the app. Synced data stays until you delete your sync account. When you delete a sync account in the app, its data is removed from our database right away. Backups held by our provider are cleared within their normal retention period.</p>
+    <p>Your account and its data stay until you delete the account. When you delete it in the app (Settings → Account → Delete account), it is removed from our database right away, along with all its habit data. Copies on your devices stay until you sign out and remove the app, or delete the account on that device. Backups held by our provider are cleared within their normal retention period.</p>
 
     <h2>Your choices and rights</h2>
     <ul>
       <li><strong>Export</strong>: Settings → Backup &amp; restore → Export my data gives you everything in one file.</li>
       <li><strong>Correct</strong>: edit any habit, check-in or note directly in the app.</li>
-      <li><strong>Delete</strong>: Settings → Account → Delete account removes your data from the device. Turning off sync stops uploads, and you can ask us to delete your sync account at any time.</li>
+      <li><strong>Delete</strong>: Settings → Account → Delete account deletes your account and all its data, on every device. You can also ask us to delete it at any time.</li>
       <li><strong>Ask or complain</strong>: write to <a href="mailto:info@ahmedelkfrawy.com">info@ahmedelkfrawy.com</a>. We answer within 30 days.</li>
     </ul>
     <p>We follow Egypt's Personal Data Protection Law (Law No. 151 of 2020). If you are in the European Union or the United Kingdom, you also have the rights described in the GDPR, including the right to complain to your local data protection authority.</p>
 
     <h2>Security</h2>
-    <p>Passwords are never stored in plain text: local passwords are hashed on your device with PBKDF2-SHA256, and sync passwords are handled by Supabase. Synced data travels over HTTPS. No system is perfectly secure, so please use a strong, unique password and keep your device locked.</p>
+    <p>Passwords are never stored in plain text: Supabase stores them as secure hashes, and the copy kept on your device for offline sign-in is hashed with PBKDF2-SHA256. Synced data travels over HTTPS. No system is perfectly secure, so please use a strong, unique password and keep your device locked.</p>
 
     <h2>Children</h2>
-    <p>Momentum is not directed at children under 13, and we don't knowingly collect data from them. If you believe a child has created a sync account, contact us and we will delete it.</p>
+    <p>Momentum is not directed at children under 13, and we don't knowingly collect data from them. If you believe a child has created an account, contact us and we will delete it.</p>
 
     <h2>Changes to this policy</h2>
     <p>If we change this policy, we'll update the date above and, for important changes, tell you in the app before they take effect.</p>
@@ -129,8 +128,8 @@ html[lang="en"] [data-lang="en"], html[lang="ar"] [data-lang="ar"] { display: bl
     <div class="summary">
       <strong>باختصار</strong>
       <ul>
-        <li>تُحفظ عاداتك على جهازك أنت. لا يخرج منه شيء إلا إذا فعّلت المزامنة.</li>
-        <li>إذا فعّلت المزامنة، تُحفظ بيانات عاداتك في حسابك السحابي الخاص لتظهر على أجهزتك الأخرى.</li>
+        <li>تسجّل الدخول بحساب Momentum واحد (بريد إلكتروني وكلمة مرور) على الويب وهاتفك وتطبيق سطح المكتب.</li>
+        <li>تُحفظ عاداتك في حسابك الخاص لتتزامن بين أجهزتك، ويحتفظ كل جهاز بنسخة ليعمل التطبيق دون إنترنت.</li>
         <li>لا إعلانات، ولا بيع للبيانات، ولا تتبّع أو تحليلات داخل التطبيقات.</li>
         <li>يمكنك تصدير كل شيء أو حذفه في أي وقت.</li>
       </ul>
@@ -145,44 +144,43 @@ html[lang="en"] [data-lang="en"], html[lang="ar"] [data-lang="ar"] { display: bl
       <table>
         <thead><tr><th>البيانات</th><th>أين تُحفظ</th><th>السبب</th></tr></thead>
         <tbody>
-          <tr><td>حسابك المحلي: اسم المستخدم والاسم الظاهر وبصمة مشفّرة لكلمة المرور (وليس كلمة المرور نفسها)</td><td>على جهازك فقط</td><td>لإبقاء عاداتك خاصة على الأجهزة المشتركة</td></tr>
-          <tr><td>العادات والتسجيلات والجداول والمزاج وساعات النوم والملاحظات والإعدادات</td><td>على جهازك، وفي حسابك السحابي أيضًا إذا فعّلت المزامنة</td><td>لتشغيل التطبيق، ولعرض البيانات نفسها على كل أجهزتك عند المزامنة</td></tr>
-          <tr><td>البريد الإلكتروني وكلمة المرور لحساب المزامنة (اختياري)</td><td>لدى مزوّد المزامنة Supabase (تُحفظ كلمات المرور مشفّرة)</td><td>لتسجيل دخولك إلى المزامنة على أجهزتك</td></tr>
+          <tr><td>حسابك: البريد الإلكتروني والاسم الظاهر وكلمة المرور (تُحفظ كبصمة مشفّرة فقط)</td><td>لدى مزوّد الحسابات Supabase (الاتحاد الأوروبي، فرانكفورت)، ويحتفظ كل جهاز بنسخة مشفّرة لتسجيل الدخول دون إنترنت</td><td>لتسجيل دخولك على أجهزتك</td></tr>
+          <tr><td>العادات والتسجيلات والجداول والمزاج وساعات النوم والملاحظات والإعدادات</td><td>في حسابك على Momentum، ونسخة على كل جهاز تسجّل الدخول عليه</td><td>لتشغيل التطبيق وعرض البيانات نفسها على كل أجهزتك، حتى دون إنترنت</td></tr>
           <tr><td>وقت التذكير</td><td>على جهازك</td><td>لإرسال التذكير اليومي الذي طلبته كإشعار محلي</td></tr>
         </tbody>
       </table>
     </div>
     <p>لا نجمع موقعك أو جهات اتصالك أو صورك أو معرّفات الإعلانات أو تحليلات الجهاز. ولا نستخدم ملفات تعريف الارتباط للتتبّع. يستخدم الموقع ونسخة الويب التخزين المحلي في متصفحك فقط لتذكّر لغتك وبيانات التطبيق على ذلك الجهاز.</p>
 
-    <h2>المزامنة السحابية</h2>
-    <p>المزامنة اختيارية ومتوقفة إلى أن تنشئ حساب مزامنة. عند تفعيلها تُرسل بيانات عاداتك عبر اتصال مشفّر (HTTPS) إلى قاعدة بيانات يديرها مزوّدنا Supabase, Inc. ولا يستطيع كل حساب قراءة أو تعديل إلا بياناته، وتفرض قاعدة البيانات ذلك بنفسها. لا نطّلع على البيانات المخزّنة إلا بطلبك (للدعم مثلًا) أو عندما يقتضي القانون ذلك.</p>
+    <h2>حسابك والمزامنة</h2>
+    <p>تُرسل بيانات عاداتك عبر اتصال مشفّر (HTTPS) إلى قاعدة بيانات يديرها مزوّدنا Supabase, Inc. في الاتحاد الأوروبي (فرانكفورت). ولا يستطيع كل حساب قراءة أو تعديل إلا بياناته، وتفرض قاعدة البيانات ذلك بنفسها. تبقى التغييرات التي تتم دون اتصال على الجهاز وتُزامن عند عودته. لا نطّلع على البيانات المخزّنة إلا بطلبك (للدعم مثلًا) أو عندما يقتضي القانون ذلك. أما الملفات التي أُنشئت في إصدارات أقدم فتبقى على جهازها فقط حتى تضيف إليها بريدًا إلكترونيًا.</p>
 
     <h2>مع من نشارك البيانات</h2>
     <p>لا نبيع بياناتك ولا نؤجّرها، ولا نشاركها لأغراض إعلانية. نستعين بمزوّدي الخدمات التالين:</p>
     <ul>
-      <li><strong>Supabase</strong>: لحفظ حسابات المزامنة وبيانات العادات المتزامنة (فقط إن استخدمت المزامنة).</li>
+      <li><strong>Supabase</strong>: لحفظ حسابات Momentum وبيانات عاداتها (الاتحاد الأوروبي، فرانكفورت).</li>
       <li><strong>GitHub</strong>: لاستضافة ملفات تنزيل تطبيق سطح المكتب، وقد يسجّل عنوان IP عند التنزيل.</li>
       <li><strong>Google Fonts</strong>: يحمّل الموقع خطوطه من Google، وقد ترى عنوان IP الخاص بك.</li>
       <li><strong>Apple وGoogle</strong>: لتوصيل التطبيقات وتحديثاتها عبر متاجرهما، وفق سياسات الخصوصية الخاصة بهما.</li>
     </ul>
 
     <h2>مدة الاحتفاظ بالبيانات</h2>
-    <p>تبقى البيانات على جهازك حتى تحذفها أو تزيل التطبيق. وتبقى البيانات المتزامنة حتى تحذف حساب المزامنة. عند حذف حساب المزامنة من التطبيق تُحذف بياناته من قاعدة بياناتنا فورًا، وتُمسح النسخ الاحتياطية لدى المزوّد خلال فترة الاحتفاظ المعتادة لديه.</p>
+    <p>يبقى حسابك وبياناته حتى تحذف الحساب. عند حذفه من التطبيق (الإعدادات ← الحساب ← حذف الحساب) يُحذف من قاعدة بياناتنا فورًا مع كل بيانات عاداته. وتبقى النسخ على أجهزتك حتى تسجّل الخروج وتزيل التطبيق، أو تحذف الحساب على ذلك الجهاز. وتُمسح النسخ الاحتياطية لدى المزوّد خلال فترة الاحتفاظ المعتادة لديه.</p>
 
     <h2>خياراتك وحقوقك</h2>
     <ul>
       <li><strong>التصدير</strong>: الإعدادات ← النسخ الاحتياطي والاستعادة ← تصدير بياناتي، لتحصل على كل شيء في ملف واحد.</li>
       <li><strong>التصحيح</strong>: عدّل أي عادة أو تسجيل أو ملاحظة مباشرة من التطبيق.</li>
-      <li><strong>الحذف</strong>: الإعدادات ← الحساب ← حذف الحساب يزيل بياناتك من الجهاز. إيقاف المزامنة يوقف الرفع، ويمكنك أن تطلب منا حذف حساب المزامنة في أي وقت.</li>
+      <li><strong>الحذف</strong>: الإعدادات ← الحساب ← حذف الحساب يحذف حسابك وكل بياناته على كل الأجهزة. ويمكنك أيضًا أن تطلب منا حذفه في أي وقت.</li>
       <li><strong>الاستفسار أو الشكوى</strong>: راسلنا على <a href="mailto:info@ahmedelkfrawy.com">info@ahmedelkfrawy.com</a>، ونرد خلال 30 يومًا.</li>
     </ul>
     <p>نلتزم بقانون حماية البيانات الشخصية المصري (القانون رقم 151 لسنة 2020). وإذا كنت في الاتحاد الأوروبي أو المملكة المتحدة فلك أيضًا الحقوق المنصوص عليها في اللائحة العامة لحماية البيانات (GDPR)، ومنها حق تقديم شكوى إلى سلطة حماية البيانات المحلية.</p>
 
     <h2>الأمان</h2>
-    <p>لا تُحفظ كلمات المرور كنص واضح أبدًا: تُشفّر كلمات المرور المحلية على جهازك بخوارزمية PBKDF2-SHA256، وتتولى Supabase كلمات مرور المزامنة. وتنتقل البيانات المتزامنة عبر HTTPS. لا يوجد نظام آمن تمامًا، لذا استخدم كلمة مرور قوية وفريدة وأبقِ جهازك مقفلًا.</p>
+    <p>لا تُحفظ كلمات المرور كنص واضح أبدًا: تحفظها Supabase كبصمات مشفّرة، والنسخة المحفوظة على جهازك لتسجيل الدخول دون إنترنت مشفّرة بخوارزمية PBKDF2-SHA256. وتنتقل البيانات المتزامنة عبر HTTPS. لا يوجد نظام آمن تمامًا، لذا استخدم كلمة مرور قوية وفريدة وأبقِ جهازك مقفلًا.</p>
 
     <h2>الأطفال</h2>
-    <p>Momentum غير موجّه للأطفال دون 13 عامًا، ولا نجمع بياناتهم عن علم. إذا كنت تعتقد أن طفلًا أنشأ حساب مزامنة فتواصل معنا وسنحذفه.</p>
+    <p>Momentum غير موجّه للأطفال دون 13 عامًا، ولا نجمع بياناتهم عن علم. إذا كنت تعتقد أن طفلًا أنشأ حسابًا فتواصل معنا وسنحذفه.</p>
 
     <h2>التغييرات على هذه السياسة</h2>
     <p>إذا غيّرنا هذه السياسة فسنحدّث التاريخ أعلاه، وسنبلغك داخل التطبيق قبل سريان التغييرات المهمة.</p>
